@@ -1,0 +1,41 @@
+<view class="work">
+  <view class="message ">
+    <van-icon name="chat" info="23" />
+    <text>早上好! 张三先生</text>
+  </view>
+  <swiper class="shuff" autoplay="{{true}}" interval="5000" 	indicator-dots="{{true}} " 	indicator-color="rgba(0, 230, 77,0.3)" 	indicator-active-color="rgba(0, 230, 77,1)">
+    <view class="shuff-list" wx:for="{{dialogShow}}" wx:key="*this" wx:for-item="item">
+      <swiper-item >
+        <image src="{{item.img}}" 	indicator-active-color="rgba()" />
+      </swiper-item>
+    </view> 
+  </swiper>
+  <view class="nav">
+    <view class="select-one" wx:for="{{navList}}" wx:for-item="item" wx:key="*this">
+      <van-icon name="{{item.icon}}" color="{{item.color}}" />
+      <text>{{item.title}}</text>
+    </view>
+  </view>
+  <view class="details">
+    <view class="details-list" wx:for="{{funAll}}" wx:key="*this" wx-for-item="{{item}}"  bindtap="onClickShow" data-item="{{item.title}}">
+      <image src="{{item.icon}}" />
+      <text>{{item.title}}</text>
+    </view>
+  </view>
+   <!-- 弹窗 -->
+   <van-overlay show="{{ show }}" bind:click="onClickHide">
+      <view class="wrapper">
+        <view class="block" catch:tap="noop" >
+          <view class="title">
+            {{currentTitle}}
+          </view>
+          <view class="show-list">
+            <view class="item" wx:for="{{funAll}}" wx:key="*this" wx-for-item="{{item}}">
+              <image src="{{item.icon}}" />
+              <text>{{item.title}}</text>
+            </view>
+          </view>
+        </view>
+      </view>
+    </van-overlay>
+</view>

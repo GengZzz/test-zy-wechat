@@ -1,0 +1,51 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/assistant/assistant",
+    "pages/common/common",
+    "pages/analysis/analysis",
+    "pages/personal/personal"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Weixin",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "selectedColor": "#00e64d",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "工作",
+        "iconPath": "./assets/work.png",
+        "selectedIconPath": "./assets/work-hover.png"
+      },
+      {
+        "pagePath": "pages/assistant/assistant",
+        "text": "助手",
+        "iconPath": "./assets/assistant.png",
+        "selectedIconPath": "./assets/assistant-hover.png"
+      },
+      {
+        "pagePath": "pages/common/common",
+        "text": "常用",
+        "iconPath": "./assets/common.png",
+        "selectedIconPath": "./assets/common-hover.png"
+      },
+      {
+        "pagePath": "pages/analysis/analysis",
+        "text": "分析",
+        "iconPath": "./assets/analysis.png",
+        "selectedIconPath": "./assets/analysis-hover.png"
+      },
+      {
+        "pagePath": "pages/personal/personal",
+        "text": "我",
+        "iconPath": "./assets/personal.png",
+        "selectedIconPath": "./assets/personal-hover.png"
+      }
+    ]
+  }
+}

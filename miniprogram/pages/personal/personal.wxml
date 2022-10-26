@@ -1,0 +1,3 @@
+<view class="personal display-center">
+  <van-empty description="开发中，敬请期待！！" />
+</view>
